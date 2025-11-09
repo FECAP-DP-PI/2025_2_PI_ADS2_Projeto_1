@@ -1,0 +1,1 @@
+export const PERGUNTAS = [ { pergunta: 'Exemplo: capital do Brasil?', opcoes: ['São Paulo','Brasília','Rio'], correta: 1 } ]

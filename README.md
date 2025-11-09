@@ -11,4 +11,4 @@ Kauã S. Rocha
 Victor Bruno Alexander Rosetti de Quiroz
 
 # Descrição: 
-O Rec Responsável é um site para conscientização da reciclagem, os diferentes tipos de materias e como devem ser tratados para uma recicalgem aprorpriada.
+O Rec Responsável é um site para conscientização da reciclagem, os diferentes tipos de materias e como devem ser tratados para uma recicalgem apropriada, utilizando de um quiz para testar os conhecimentos.

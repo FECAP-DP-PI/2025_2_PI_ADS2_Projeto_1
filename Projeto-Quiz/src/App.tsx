@@ -2,6 +2,7 @@ import { use, useState } from "react"
 import TelaFinal from "./componentes/tela-final"
 import TelaInicial from "./componentes/tela-inicial"
 import TelaPerguntas from "./componentes/tela-perguntas"
+import GerenciarPerguntas from "./componentes/gerenciar-perguntas"
 import type { GameState } from "./tipo/quiz"
 import { PERGUNTAS } from "./dados/perguntas"
 
@@ -10,6 +11,15 @@ function App() {
   const[selectAnswer, setSelectAnswer] = useState<number | null>(null);
   const[perguntaAtual,setPerguntaAtua] = useState<number>(0);
   const[pontosAtual, setPontosAtual] = useState<number>(0);
+const [view, setView] = useState<"app" | "gerenciar">("app");
+
+const handleGerenciar = () => {
+  setView("gerenciar");
+}
+const voltarGerenciar = () => {
+  setView("app");
+}
+
 const handleStart = () => {
   setGameState("Jogando");
   setPontosAtual(0);

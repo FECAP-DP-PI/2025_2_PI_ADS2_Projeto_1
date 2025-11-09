@@ -1,7 +1,7 @@
 import { type Perguntitas } from "../tipo/quiz"
 
 export const PERGUNTAS: Perguntitas [] = [
-  {
+  {id: 1,
     pergunta: "O que é reciclagem?",
     opções: ["A transformação de materiais usados em novos produtos", "A queima de lixo para gerar energia", "O descarte de resíduos no meio ambiente", "A separação de lixo orgânico e reciclável sem reaproveitamento"],
     correta: 0
