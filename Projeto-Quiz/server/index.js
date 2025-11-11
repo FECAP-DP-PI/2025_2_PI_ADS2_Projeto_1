@@ -1,4 +1,4 @@
-// index.js - backend with SQLite if available, otherwise JSON fallback
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -120,7 +120,7 @@ app.delete('/api/perguntas/:id', (req, res) => {
   }
 });
 
-// Serve frontend build if exists
+
 const frontendDist = path.join(__dirname, '..', 'client', 'dist');
 if (fs.existsSync(frontendDist)) {
   app.use(express.static(frontendDist));

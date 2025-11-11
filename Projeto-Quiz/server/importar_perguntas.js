@@ -1,8 +1,4 @@
-/*
-importar_perguntas.js
-Roda no servidor: node importar_perguntas.js
-Tenta ler o arquivo TypeScript de perguntas e inserir no banco (sqlite ou json fallback).
-*/
+
 const fs = require('fs');
 const path = require('path');
 
@@ -15,7 +11,7 @@ try {
   process.exit(1);
 }
 
-// Extract the array between the first '[' and the last ']'
+
 const start = raw.indexOf('[');
 const end = raw.lastIndexOf(']');
 if (start === -1 || end === -1) {
@@ -24,8 +20,7 @@ if (start === -1 || end === -1) {
 }
 const arrText = raw.slice(start, end+1);
 
-// Naive eval after replacing TypeScript-only tokens (like 'export', 'type' etc.)
-// This is best-effort; revise manualy if parser fails.
+
 const jsText = arrText.replace(/\\bopções\\b/g, 'opcoes').replace(/\\bpergunta\\b/g, 'pergunta').replace(/\\bcorreta\\b/g, 'correta');
 let perguntas = null;
 try {
@@ -35,7 +30,6 @@ try {
   process.exit(1);
 }
 
-// Try to import
 let usedSqlite = false;
 try {
   const Database = require('better-sqlite3');
